@@ -6,15 +6,19 @@ describe("webpack.base test", () => {
     const webpackBase = require("../../lib/webpack.base");
 
     assert.equal(
-      webpackBase.entry.home,
-      "E:/study/wepack/panwj-webpack4/test/smoke/template/src/home/index.jsx"
+      webpackBase.entry.home.indexOf(
+        "panwj-webpack4/test/smoke/template/src/home/index.jsx"
+      ) !== -1,
+      true
     );
 
     assert.equal(
-      webpackBase.entry.view,
-      "E:/study/wepack/panwj-webpack4/test/smoke/template/src/view/index.jsx"
+      webpackBase.entry.view.indexOf(
+        "panwj-webpack4/test/smoke/template/src/view/index.jsx"
+      ) !== -1,
+      true
     );
 
-    done()
+    done();
   });
 });
