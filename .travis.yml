@@ -10,7 +10,7 @@ cache:
 node_js: v16.17.0
 
 install:
-  npm install -D
+  npm install --legacy-peer-deps
 
 script:
   npm run test
