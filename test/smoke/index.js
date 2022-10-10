@@ -1,9 +1,16 @@
 const webpack = require("webpack");
 const rimraf = require("rimraf");
 const path = require("path");
+const fs = require("fs");
 const Mocha = require("mocha");
 
-process.chdir(path.resolve(__dirname, "template/lib"));
+const libPath = path.resolve(__dirname, "template/lib");
+
+if(!fs.existsSync(libPath)){
+  fs.mkdirSync(libPath)
+}
+
+process.chdir(libPath);
 
 const mocha = new Mocha();
 

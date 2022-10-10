@@ -9,7 +9,7 @@
     "build:ssr": "set NODE_ENV=development & webpack --config ./lib/webpack.ssr.js",
     "serve": "nodemon ./serve/index.js",
     "eslint": "eslint ./lib --fix",
-    "test": "nyc ./node_modules/mocha/bin/_mocha"
+    "test": "nyc ./node_modules/mocha/bin/_mocha --timeout 10000"
   },
   "dependencies": {
     "@babel/core": "^7.19.1",
